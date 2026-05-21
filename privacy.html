@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="only dark">
+<title>Privacy Policy — virke</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:     #0c110f;
+  --bg2:    #0f1612;
+  --text:   #EDF0EC;
+  --text2:  #667D74;
+  --text3:  #374540;
+  --accent: #5f926d;
+  --border: rgba(255, 255, 255, 0.055);
+  --serif:  'Playfair Display', Georgia, serif;
+  --sans:   'DM Sans', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; color-scheme: only dark; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 48px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(12, 17, 15, 0.9);
+  backdrop-filter: blur(24px);
+}
+
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 21px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-link {
+  font-size: 14px;
+  color: var(--text2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-link:hover { color: var(--text); }
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 140px 40px 100px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 56px);
+  letter-spacing: -1px;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.last-updated {
+  font-size: 13px;
+  color: var(--text3);
+  margin-bottom: 56px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+h2 {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--text);
+  margin-top: 48px;
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 15px;
+  color: var(--text2);
+  margin-bottom: 16px;
+  line-height: 1.8;
+}
+
+ul {
+  margin: 0 0 16px 0;
+  padding-left: 20px;
+}
+
+ul li {
+  font-size: 15px;
+  color: var(--text2);
+  margin-bottom: 8px;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-logo {
+  font-family: var(--serif);
+  font-size: 17px;
+  color: var(--text3);
+}
+
+.footer-right {
+  font-size: 12px;
+  color: var(--text3);
+}
+
+@media (max-width: 640px) {
+  nav { padding: 16px 20px; }
+  .wrap { padding: 120px 24px 80px; }
+  footer { padding: 20px 24px; flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">virke</a>
+  <a href="/" class="nav-link">← Back to home</a>
+</nav>
+
+<div class="wrap">
+  <p class="eyebrow">Legal</p>
+  <h1>Privacy Policy</h1>
+  <p class="last-updated">Last updated: May 21, 2026</p>
+
+  <p>virke ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share information when you use the virke mobile application and related services.</p>
+
+  <h2>1. Information We Collect</h2>
+  <p>We collect the following types of information when you use virke:</p>
+  <ul>
+    <li><strong>Account information:</strong> Your name, email address, and password when you create an account.</li>
+    <li><strong>Location data:</strong> Your device location to match you with contractors in your area. We only collect location when the app is in use.</li>
+    <li><strong>Service request information:</strong> Descriptions of home repair issues you submit through the app.</li>
+    <li><strong>Communication data:</strong> Messages exchanged with Axel, our AI concierge.</li>
+    <li><strong>Payment information:</strong> Payment is processed through Stripe. We do not store your full card details.</li>
+    <li><strong>Device information:</strong> Push notification tokens and basic device data used to deliver notifications.</li>
+  </ul>
+
+  <h2>2. How We Use Your Information</h2>
+  <p>We use the information we collect to:</p>
+  <ul>
+    <li>Match you with qualified local contractors for your home repair needs.</li>
+    <li>Enable Axel, our AI voice agent, to contact and book contractors on your behalf.</li>
+    <li>Process service requests and facilitate communication between you and contractors.</li>
+    <li>Send push notifications about your job status and booking updates.</li>
+    <li>Improve the virke platform and user experience.</li>
+    <li>Comply with legal obligations.</li>
+  </ul>
+
+  <h2>3. Third Parties We Share Information With</h2>
+  <p>We share limited information with the following third-party service providers:</p>
+  <ul>
+    <li><strong>Telnyx:</strong> Our voice and SMS provider. Telnyx powers Axel's phone calls to contractors and SMS notifications. Job descriptions and scheduling information are transmitted through Telnyx.</li>
+    <li><strong>Anthropic:</strong> The AI infrastructure powering Axel's conversation capabilities. Messages you send in the chat are processed by Anthropic's Claude API.</li>
+    <li><strong>Stripe:</strong> Payment processing. Your payment information is handled directly by Stripe and subject to their privacy policy.</li>
+    <li><strong>Google:</strong> We use Google Places API for address autocomplete and location services.</li>
+    <li><strong>Supabase:</strong> Our database and authentication provider, used to securely store your account and service request data.</li>
+  </ul>
+  <p>We do not sell your personal information to third parties.</p>
+
+  <h2>4. How Long We Keep Your Data</h2>
+  <p>We retain your account information and service history for as long as your account is active. If you delete your account, we will delete your personal data within 30 days, except where we are required to retain it for legal or compliance purposes.</p>
+  <p>Completed job records may be retained in anonymized form for service quality and analytics purposes.</p>
+
+  <h2>5. How to Delete Your Account and Data</h2>
+  <p>You can delete your account directly from the virke app by going to <strong>Settings → Delete Account</strong>. This will permanently remove your account, profile, and associated data.</p>
+  <p>You may also request deletion by emailing us at <a href="mailto:privacy@virke.us">privacy@virke.us</a>. We will process your request within 30 days.</p>
+
+  <h2>6. Data Security</h2>
+  <p>We use industry-standard security practices to protect your information, including encrypted connections (HTTPS/TLS), secure authentication via Supabase, and limited access controls. However, no system is completely secure, and we cannot guarantee absolute security.</p>
+
+  <h2>7. Children's Privacy</h2>
+  <p>virke is not intended for use by children under the age of 13. We do not knowingly collect personal information from children. If you believe we have inadvertently collected such information, please contact us at <a href="mailto:privacy@virke.us">privacy@virke.us</a>.</p>
+
+  <h2>8. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. We will notify you of significant changes through the app or by email. Continued use of virke after changes are posted constitutes your acceptance of the updated policy.</p>
+
+  <h2>9. Contact Us</h2>
+  <p>If you have any questions or concerns about this Privacy Policy or your data, please contact us:</p>
+  <ul>
+    <li>Email: <a href="mailto:privacy@virke.us">privacy@virke.us</a></li>
+    <li>Website: <a href="https://virke.us">virke.us</a></li>
+  </ul>
+</div>
+
+<footer>
+  <span class="footer-logo">virke</span>
+  <span class="footer-right">© 2026 virke · Seattle, WA</span>
+</footer>
+
+</body>
+</html>
