@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="only dark">
+<title>Terms of Service — virke</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:     #0C1512;
+  --bg2:    #111d18;
+  --text:   #EDF0EC;
+  --text2:  #667D74;
+  --text3:  #374540;
+  --accent: #5f926d;
+  --border: rgba(255, 255, 255, 0.055);
+  --serif:  'Playfair Display', Georgia, serif;
+  --sans:   'DM Sans', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; color-scheme: only dark; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 48px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(12, 21, 18, 0.9);
+  backdrop-filter: blur(24px);
+}
+
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 21px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-link {
+  font-size: 14px;
+  color: var(--text2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-link:hover { color: var(--text); }
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 140px 40px 100px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 56px);
+  letter-spacing: -1px;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.last-updated {
+  font-size: 13px;
+  color: var(--text3);
+  margin-bottom: 56px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+h2 {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--text);
+  margin-top: 48px;
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 15px;
+  color: var(--text2);
+  margin-bottom: 16px;
+  line-height: 1.8;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.notice {
+  font-size: 13px;
+  color: var(--text3);
+  font-style: italic;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-logo {
+  font-family: var(--serif);
+  font-size: 17px;
+  color: var(--text3);
+}
+
+.footer-right { font-size: 12px; color: var(--text3); }
+.footer-right a { color: inherit; text-decoration: none; }
+.footer-right a:hover { color: var(--text2); }
+
+@media (max-width: 640px) {
+  nav { padding: 16px 20px; }
+  .wrap { padding: 120px 24px 80px; }
+  footer { padding: 20px 24px; flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">virke</a>
+  <a href="/" class="nav-link">← Back to home</a>
+</nav>
+
+<div class="wrap">
+  <p class="eyebrow">Legal</p>
+  <h1>Terms of Service</h1>
+  <p class="last-updated">Last updated: May 2026</p>
+
+  <p>Please read these terms carefully before using virke. By creating an account or using our platform, you agree to be bound by these terms.</p>
+
+  <h2>What virke is — and is not</h2>
+  <p>virke, Inc. operates a technology platform that connects homeowners with independent third-party home service providers. virke is a technology platform only. We are not a contractor, home services company, or employer of any contractor. We do not perform any home repair or improvement services.</p>
+
+  <h2>Contractor vetting disclaimer</h2>
+  <p>virke does not verify, endorse, or guarantee any contractor. We do not confirm that any contractor holds a valid license, bond, or insurance policy. It is your sole responsibility to independently verify a contractor's credentials before allowing them access to your property.</p>
+
+  <h2>AI communications — consent</h2>
+  <p>By using virke, you expressly consent to receive automated calls and text messages placed by or on behalf of virke using artificial intelligence technology, including our AI scheduling agent Axel. By using our platform, contractors consent to receiving these automated calls in connection with job placement.</p>
+
+  <h2>Payments</h2>
+  <p>Payments are processed securely through Stripe. virke charges contractors a per-job fee to access confirmed job details. Customers use the platform free of charge. All fees are disclosed prior to any charge being made.</p>
+
+  <h2>Limitation of liability</h2>
+  <p>To the maximum extent permitted by law, virke shall not be liable for any indirect, incidental, or consequential damages arising from your use of the platform or any contractor's services. virke's total liability shall not exceed the greater of fees paid by you in the 12 months preceding the claim or $100.</p>
+
+  <h2>Dispute resolution</h2>
+  <p>All disputes arising from these terms shall be resolved by binding individual arbitration administered by the American Arbitration Association in King County, Washington. You waive the right to participate in any class action.</p>
+
+  <h2>Governing law</h2>
+  <p>These terms are governed by the laws of the State of Washington.</p>
+
+  <h2>Contact</h2>
+  <p>For questions about these terms, contact <a href="mailto:legal@virke.us">legal@virke.us</a> or visit <a href="https://virke.us">virke.us</a>.</p>
+
+  <p class="notice">For questions about privacy, visit <a href="/privacy">virke.us/privacy</a>. virke, Inc. · Kirkland, WA</p>
+</div>
+
+<footer>
+  <span class="footer-logo">virke</span>
+  <span class="footer-right">© 2026 virke · Seattle, WA · <a href="mailto:hello@virke.us">hello@virke.us</a></span>
+</footer>
+
+</body>
+</html>
+
