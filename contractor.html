@@ -51,288 +51,159 @@ nav {
   backdrop-filter: blur(24px);
 }
 
-.nav-logo {
-  font-family: var(--serif);
-  font-size: 21px;
-  color: var(--text);
-  text-decoration: none;
-}
-
-.nav-link {
-  font-size: 14px;
-  color: var(--text2);
-  text-decoration: none;
-  transition: color 0.2s;
-}
+.nav-logo { font-family: var(--serif); font-size: 21px; color: var(--text); text-decoration: none; }
+.nav-link { font-size: 14px; color: var(--text2); text-decoration: none; transition: color 0.2s; }
 .nav-link:hover { color: var(--text); }
 
-.page {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 140px 40px 100px;
-}
+.page { max-width: 680px; margin: 0 auto; padding: 140px 40px 100px; }
 
-.eyebrow {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 16px;
-  opacity: 0.8;
-}
+.eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; opacity: 0.8; }
 
-h1 {
-  font-family: var(--serif);
-  font-size: clamp(36px, 5vw, 52px);
-  letter-spacing: -1px;
-  line-height: 1.1;
-  color: var(--text);
-  margin-bottom: 16px;
-}
+h1 { font-family: var(--serif); font-size: clamp(36px, 5vw, 52px); letter-spacing: -1px; line-height: 1.1; color: var(--text); margin-bottom: 16px; }
 
-.subtitle {
-  font-size: 16px;
-  color: var(--text2);
-  line-height: 1.75;
-  margin-bottom: 56px;
-  max-width: 480px;
-}
+.subtitle { font-size: 16px; color: var(--text2); line-height: 1.75; margin-bottom: 56px; max-width: 480px; }
 
-/* Form */
 .form { display: flex; flex-direction: column; gap: 0; }
 
-.section-label {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--text3);
-  margin-top: 40px;
-  margin-bottom: 16px;
-}
+.section-label { font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); margin-top: 40px; margin-bottom: 16px; }
 .section-label:first-child { margin-top: 0; }
 
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 16px;
-}
+.field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.field-header { display: flex; align-items: center; gap: 8px; }
+.field label { font-size: 13px; font-weight: 500; color: var(--text2); }
 
-.field label {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text2);
-  letter-spacing: 0.02em;
+.info-btn {
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--bg3); border: 1px solid var(--border);
+  color: var(--text3); font-size: 10px; font-weight: 500;
+  cursor: default; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; position: relative;
 }
+.tooltip {
+  display: none; position: absolute; left: 24px; top: -4px;
+  background: var(--bg3); border: 1px solid var(--accent-border);
+  border-radius: 8px; padding: 10px 14px; font-size: 12px;
+  color: var(--text2); line-height: 1.6; width: 240px; z-index: 10;
+}
+.info-btn:hover .tooltip { display: block; }
 
 .field input,
 .field textarea {
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  color: var(--text);
-  padding: 13px 16px;
-  border-radius: 10px;
-  font-family: var(--sans);
-  font-size: 15px;
-  font-weight: 300;
-  outline: none;
-  transition: border-color 0.2s;
-  width: 100%;
-  appearance: none;
+  background: var(--bg2); border: 1px solid var(--border);
+  color: var(--text); padding: 13px 16px; border-radius: 10px;
+  font-family: var(--sans); font-size: 15px; font-weight: 300;
+  outline: none; transition: border-color 0.2s; width: 100%;
 }
-
 .field input::placeholder,
 .field textarea::placeholder { color: var(--text3); }
 .field input:focus,
 .field textarea:focus { border-color: var(--accent-border); }
-
-.field input[type="file"] { color: var(--text2); padding: 10px 16px; }
-
 .field textarea { resize: vertical; min-height: 80px; }
-
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
-/* Multi-select checkboxes */
-.checkbox-group {
+/* Service search */
+.service-search-wrap { position: relative; }
+
+.service-search-input {
+  background: var(--bg2); border: 1px solid var(--border);
+  color: var(--text); padding: 13px 16px; border-radius: 10px;
+  font-family: var(--sans); font-size: 15px; font-weight: 300;
+  outline: none; transition: border-color 0.2s; width: 100%;
+}
+.service-search-input::placeholder { color: var(--text3); }
+.service-search-input:focus { border-color: var(--accent-border); }
+
+.service-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0; right: 0;
+  background: var(--bg2);
+  border: 1px solid var(--accent-border);
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.service-option {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--text2);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  border-bottom: 1px solid var(--border);
+}
+.service-option:last-child { border-bottom: none; }
+.service-option:hover { background: var(--accent-subtle); color: var(--text); }
+
+/* Selected tags */
+.selected-services {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 16px;
+  margin-top: 10px;
 }
 
-.checkbox-item {
+.service-tag {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 10px 14px;
-  cursor: pointer;
-  transition: border-color 0.2s, background 0.2s;
-  user-select: none;
-}
-
-.checkbox-item:hover { border-color: var(--accent-border); }
-.checkbox-item.checked {
   background: var(--accent-subtle);
-  border-color: var(--accent-border);
+  border: 1px solid var(--accent-border);
+  border-radius: 980px;
+  padding: 6px 12px;
+  font-size: 13px;
+  color: var(--text);
 }
 
-.checkbox-item input[type="checkbox"] { display: none; }
-
-.checkbox-item span {
+.service-tag-remove {
+  cursor: pointer;
+  color: var(--text3);
   font-size: 14px;
-  color: var(--text2);
-  font-weight: 400;
+  line-height: 1;
+  transition: color 0.15s;
 }
-.checkbox-item.checked span { color: var(--text); }
+.service-tag-remove:hover { color: var(--text); }
 
 /* Toggle */
-.toggle-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 16px;
-  margin-bottom: 16px;
-  cursor: pointer;
-}
-
+.toggle-row { display: flex; align-items: center; justify-content: space-between; background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin-bottom: 16px; cursor: pointer; }
 .toggle-left { display: flex; flex-direction: column; gap: 3px; }
 .toggle-title { font-size: 15px; color: var(--text); font-weight: 400; }
 .toggle-sub { font-size: 13px; color: var(--text2); }
-
-.toggle-switch {
-  width: 44px; height: 24px;
-  background: var(--bg3);
-  border-radius: 12px;
-  position: relative;
-  transition: background 0.2s;
-  flex-shrink: 0;
-  border: 1px solid var(--border);
-}
+.toggle-switch { width: 44px; height: 24px; background: var(--bg3); border-radius: 12px; position: relative; transition: background 0.2s; flex-shrink: 0; border: 1px solid var(--border); }
 .toggle-switch.on { background: var(--accent); border-color: var(--accent); }
-
-.toggle-knob {
-  width: 18px; height: 18px;
-  background: var(--text2);
-  border-radius: 50%;
-  position: absolute;
-  top: 2px; left: 2px;
-  transition: transform 0.2s, background 0.2s;
-}
+.toggle-knob { width: 18px; height: 18px; background: var(--text2); border-radius: 50%; position: absolute; top: 2px; left: 2px; transition: transform 0.2s, background 0.2s; }
 .toggle-switch.on .toggle-knob { transform: translateX(20px); background: white; }
 
-/* Fee explanation */
-.fee-box {
-  background: var(--accent-subtle);
-  border: 1px solid var(--accent-border);
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 16px;
-}
+/* Fee box */
+.fee-box { background: var(--accent-subtle); border: 1px solid var(--accent-border); border-radius: 12px; padding: 20px; margin-bottom: 32px; }
+.fee-box h3 { font-family: var(--sans); font-size: 14px; font-weight: 500; color: var(--accent); margin-bottom: 10px; }
+.fee-box p { font-size: 13.5px; color: var(--text2); line-height: 1.7; }
 
-.fee-box h3 {
-  font-family: var(--sans);
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--accent);
-  margin-bottom: 10px;
-  letter-spacing: 0.02em;
-}
-
-.fee-box p {
-  font-size: 13.5px;
-  color: var(--text2);
-  line-height: 1.7;
-}
-
-/* Checkbox agreement */
-.agree-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 32px;
-  cursor: pointer;
-  margin-top: 8px;
-}
-
-.agree-box {
-  width: 20px; height: 20px;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  background: var(--bg2);
-  flex-shrink: 0;
-  margin-top: 1px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s, border-color 0.2s;
-}
-.agree-box.checked {
-  background: var(--accent);
-  border-color: var(--accent);
-}
+/* Agreement */
+.agree-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 32px; cursor: pointer; margin-top: 8px; }
+.agree-box { width: 20px; height: 20px; border: 1px solid var(--border); border-radius: 4px; background: var(--bg2); flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; transition: background 0.2s, border-color 0.2s; }
+.agree-box.checked { background: var(--accent); border-color: var(--accent); }
 .agree-box svg { display: none; }
 .agree-box.checked svg { display: block; }
-
-.agree-text {
-  font-size: 13px;
-  color: var(--text2);
-  line-height: 1.65;
-}
+.agree-text { font-size: 13px; color: var(--text2); line-height: 1.65; }
 .agree-text a { color: var(--accent); text-decoration: none; }
 .agree-text a:hover { text-decoration: underline; }
 
 /* Submit */
-.submit-btn {
-  width: 100%;
-  background: var(--accent);
-  color: var(--bg);
-  border: none;
-  padding: 16px;
-  border-radius: 12px;
-  font-family: var(--sans);
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.15s;
-  letter-spacing: 0.01em;
-}
+.submit-btn { width: 100%; background: var(--accent); color: var(--bg); border: none; padding: 16px; border-radius: 12px; font-family: var(--sans); font-size: 16px; font-weight: 500; cursor: pointer; transition: background 0.2s, transform 0.15s; }
 .submit-btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
 .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
 
-.success-state {
-  display: none;
-  text-align: center;
-  padding: 60px 0;
-}
-.success-state h2 {
-  font-family: var(--serif);
-  font-size: 36px;
-  color: var(--text);
-  margin-bottom: 16px;
-}
+.success-state { display: none; text-align: center; padding: 60px 0; }
+.success-state h2 { font-family: var(--serif); font-size: 36px; color: var(--text); margin-bottom: 16px; }
 .success-state p { font-size: 16px; color: var(--text2); line-height: 1.7; }
 
-footer {
-  border-top: 1px solid var(--border);
-  padding: 28px 48px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-.footer-logo { font-family: var(--serif); font-size: 17px; color: var(--text3); }
-.footer-right { font-size: 12px; color: var(--text3); }
-.footer-right a { color: inherit; text-decoration: none; }
-.footer-right a:hover { color: var(--text2); }
+footer { border-top: 1px solid var(--border); padding: 28px 48px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.footer-logo { font-family: var(--serif); font-size: 17px; color: #ffffff; }
+.footer-right { font-size: 12px; color: #ffffff; display: flex; gap: 20px; flex-wrap: wrap; }
+.footer-right a { color: #ffffff; text-decoration: none; }
+.footer-right a:hover { opacity: 0.7; }
 
 @media (max-width: 640px) {
   nav { padding: 16px 20px; }
@@ -351,12 +222,12 @@ footer {
 
 <div class="page">
   <p class="eyebrow">For contractors</p>
-  <h1>Join the virke network.</h1>
-  <p class="subtitle">Get matched with vetted local jobs. No bidding, no chasing leads. Axel calls you when there's work that fits your services.</p>
+  <h1>Join the Virke network.</h1>
+  <p class="subtitle">Get matched with confirmed local jobs. No bidding, no chasing leads. Axel calls you directly when there's work that fits your trade.</p>
 
   <div class="fee-box">
     <h3>How the fee works</h3>
-    <p>When you accept a job through virke, a $10 fee unlocks the customer's full address and job details. You're not competing with anyone — the job is yours. If the fee doesn't feel worth it for a confirmed, exclusive job, no hard feelings. We'll move to the next contractor.</p>
+    <p>When you accept a job through Virke, a $20 fee unlocks the customer's full address and job details. You're not competing with anyone — the job is yours. If it's not a fit, just decline and it moves to the next contractor. No subscription, no monthly fees, ever.</p>
   </div>
 
   <form class="form" onsubmit="handleSubmit(event)">
@@ -376,7 +247,13 @@ footer {
 
     <div class="field-row">
       <div class="field">
-        <label>Phone number *</label>
+        <div class="field-header">
+          <label>Personal phone number *</label>
+          <div class="info-btn">
+            i
+            <div class="tooltip">This must be your personal cell phone. Axel — our AI agent — will call this number directly when a confirmed job comes in. You'll need to be reachable to accept or decline.</div>
+          </div>
+        </div>
         <input type="tel" id="phone" placeholder="(206) 555-0100" required />
       </div>
       <div class="field">
@@ -388,29 +265,20 @@ footer {
     <p class="section-label">Services</p>
 
     <div class="field">
-      <label>Service types * (select all that apply)</label>
-    </div>
-    <div class="checkbox-group" id="service-types">
-      <div class="checkbox-item" onclick="toggleCheck(this)">
-        <input type="checkbox" value="plumbing" />
-        <span>🔧 Plumbing</span>
+      <label>Service types * (search and select all that apply)</label>
+      <div class="service-search-wrap">
+        <input
+          type="text"
+          class="service-search-input"
+          id="service-search"
+          placeholder="Search — e.g. plumbing, HVAC, painting..."
+          autocomplete="off"
+          oninput="filterServices(this.value)"
+          onfocus="showDropdown()"
+        />
+        <div class="service-dropdown" id="service-dropdown"></div>
       </div>
-      <div class="checkbox-item" onclick="toggleCheck(this)">
-        <input type="checkbox" value="electrical" />
-        <span>⚡ Electrical</span>
-      </div>
-      <div class="checkbox-item" onclick="toggleCheck(this)">
-        <input type="checkbox" value="hvac" />
-        <span>❄️ HVAC</span>
-      </div>
-      <div class="checkbox-item" onclick="toggleCheck(this)">
-        <input type="checkbox" value="appliance" />
-        <span>🏠 Appliance Repair</span>
-      </div>
-      <div class="checkbox-item" onclick="toggleCheck(this)">
-        <input type="checkbox" value="general" />
-        <span>🔨 General Handyman</span>
-      </div>
+      <div class="selected-services" id="selected-services"></div>
     </div>
 
     <div class="field">
@@ -426,7 +294,7 @@ footer {
     <div class="toggle-row" onclick="toggleEmergency()">
       <div class="toggle-left">
         <span class="toggle-title">Emergency availability</span>
-        <span class="toggle-sub">Available 24/7 for urgent jobs (plumbing, HVAC, locksmith)</span>
+        <span class="toggle-sub">Available 24/7 for urgent jobs</span>
       </div>
       <div class="toggle-switch" id="emergency-toggle">
         <div class="toggle-knob"></div>
@@ -451,28 +319,6 @@ footer {
       <input type="file" id="photo" accept="image/*" />
     </div>
 
-    <p class="section-label">Payment</p>
-
-    <div class="field">
-      <label>Card on file *</label>
-      <input type="text" id="card-number" placeholder="Card number" required maxlength="19" oninput="formatCard(this)" />
-    </div>
-
-    <div class="field-row">
-      <div class="field">
-        <label>Expiry</label>
-        <input type="text" id="card-expiry" placeholder="MM / YY" maxlength="7" oninput="formatExpiry(this)" />
-      </div>
-      <div class="field">
-        <label>CVC</label>
-        <input type="text" id="card-cvc" placeholder="123" maxlength="4" />
-      </div>
-    </div>
-
-    <p style="font-size: 12px; color: var(--text3); margin-bottom: 24px; margin-top: -8px;">
-      Your card is charged $10 only when you accept a job. No subscription, no monthly fees.
-    </p>
-
     <div class="agree-row" onclick="toggleAgree()">
       <div class="agree-box" id="agree-box">
         <svg width="12" height="9" viewBox="0 0 12 9" fill="none">
@@ -480,61 +326,118 @@ footer {
         </svg>
       </div>
       <span class="agree-text">
-        I agree to the virke <a href="/terms" onclick="event.stopPropagation()">Contractor Terms and Conditions</a> and understand the $10 per-job fee structure.
+        I agree to the Virke <a href="/terms" onclick="event.stopPropagation()">Contractor Terms and Conditions</a> and understand the $20 per-job fee structure.
       </span>
     </div>
 
-    <button type="submit" class="submit-btn" id="submit-btn">Apply to join virke</button>
+    <button type="submit" class="submit-btn" id="submit-btn">Apply to join Virke</button>
 
   </form>
 
   <div class="success-state" id="success-state">
     <h2>Application received.</h2>
-    <p>We'll review your information and reach out within 1-2 business days.<br>Questions? Email <a href="mailto:hello@virke.us">hello@virke.us</a></p>
+    <p>We'll review your information and reach out within 1-2 business days.<br>Questions? Email <a href="mailto:hello@virke.us" style="color:var(--accent)">hello@virke.us</a></p>
   </div>
 
 </div>
 
 <footer>
   <span class="footer-logo">virke</span>
-  <span class="footer-right">© 2026 virke · Seattle, WA · <a href="mailto:hello@virke.us">hello@virke.us</a></span>
+  <div class="footer-right">
+    <span>© 2026 virke, Inc. · Seattle, WA</span>
+    <a href="/privacy">Privacy Policy</a>
+    <a href="/terms">Terms of Service</a>
+    <a href="mailto:hello@virke.us">hello@virke.us</a>
+  </div>
 </footer>
 
 <script>
+var ALL_SERVICES = [
+  "Plumbing", "Electrical", "HVAC", "Appliance Repair", "General Handyman",
+  "Roofing", "Painting", "Landscaping", "Pest Control", "Cleaning",
+  "Gutter Cleaning", "Dock & Marine", "Window Washing", "Flooring",
+  "Locksmith", "Pressure Washing", "Carpentry", "Concrete & Masonry",
+  "Fencing", "Garage Door Repair", "Irrigation", "Pool & Spa",
+  "Snow Removal", "Tree Service", "Tile & Grout", "Drywall",
+  "Insulation", "Chimney Cleaning", "Moving & Hauling", "Welding"
+];
+
+var selectedServices = [];
 var emergencyOn = false;
 var agreeChecked = false;
 
-function toggleCheck(el) {
-  el.classList.toggle('checked');
-  el.querySelector('input').checked = el.classList.contains('checked');
+function filterServices(query) {
+  var dropdown = document.getElementById('service-dropdown');
+  dropdown.innerHTML = '';
+
+  if (!query.trim()) {
+    dropdown.style.display = 'none';
+    return;
+  }
+
+  var matches = ALL_SERVICES.filter(function(s) {
+    return s.toLowerCase().includes(query.toLowerCase()) && !selectedServices.includes(s);
+  });
+
+  if (matches.length === 0) {
+    dropdown.style.display = 'none';
+    return;
+  }
+
+  matches.forEach(function(service) {
+    var div = document.createElement('div');
+    div.className = 'service-option';
+    div.textContent = service;
+    div.onclick = function() { selectService(service); };
+    dropdown.appendChild(div);
+  });
+
+  dropdown.style.display = 'block';
 }
+
+function showDropdown() {
+  var query = document.getElementById('service-search').value;
+  if (query.trim()) filterServices(query);
+}
+
+function selectService(service) {
+  if (selectedServices.includes(service)) return;
+  selectedServices.push(service);
+  renderTags();
+  document.getElementById('service-search').value = '';
+  document.getElementById('service-dropdown').style.display = 'none';
+}
+
+function removeService(service) {
+  selectedServices = selectedServices.filter(function(s) { return s !== service; });
+  renderTags();
+}
+
+function renderTags() {
+  var container = document.getElementById('selected-services');
+  container.innerHTML = '';
+  selectedServices.forEach(function(service) {
+    var tag = document.createElement('div');
+    tag.className = 'service-tag';
+    tag.innerHTML = '<span>' + service + '</span><span class="service-tag-remove" onclick="removeService(\'' + service + '\')">×</span>';
+    container.appendChild(tag);
+  });
+}
+
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.service-search-wrap')) {
+    document.getElementById('service-dropdown').style.display = 'none';
+  }
+});
 
 function toggleEmergency() {
   emergencyOn = !emergencyOn;
-  var toggle = document.getElementById('emergency-toggle');
-  toggle.classList.toggle('on', emergencyOn);
+  document.getElementById('emergency-toggle').classList.toggle('on', emergencyOn);
 }
 
 function toggleAgree() {
   agreeChecked = !agreeChecked;
-  var box = document.getElementById('agree-box');
-  box.classList.toggle('checked', agreeChecked);
-}
-
-function formatCard(input) {
-  var v = input.value.replace(/\D/g, '').substring(0, 16);
-  input.value = v.replace(/(.{4})/g, '$1 ').trim();
-}
-
-function formatExpiry(input) {
-  var v = input.value.replace(/\D/g, '').substring(0, 4);
-  if (v.length >= 2) v = v.substring(0, 2) + ' / ' + v.substring(2);
-  input.value = v;
-}
-
-function getSelectedServices() {
-  var items = document.querySelectorAll('#service-types .checkbox-item.checked input');
-  return Array.from(items).map(function(i) { return i.value; });
+  document.getElementById('agree-box').classList.toggle('checked', agreeChecked);
 }
 
 function handleSubmit(e) {
@@ -545,8 +448,7 @@ function handleSubmit(e) {
     return;
   }
 
-  var services = getSelectedServices();
-  if (services.length === 0) {
+  if (selectedServices.length === 0) {
     alert('Please select at least one service type.');
     return;
   }
@@ -555,13 +457,12 @@ function handleSubmit(e) {
   btn.disabled = true;
   btn.textContent = 'Submitting...';
 
-  // Collect form data
   var formData = {
     full_name: document.getElementById('full-name').value,
     business_name: document.getElementById('business-name').value,
     phone: document.getElementById('phone').value,
     email: document.getElementById('email').value,
-    service_types: services,
+    service_types: selectedServices,
     coverage: document.getElementById('coverage').value,
     hours: document.getElementById('hours').value,
     emergency: emergencyOn,
@@ -569,10 +470,8 @@ function handleSubmit(e) {
     insurance: document.getElementById('insurance').value,
   };
 
-  // TODO: POST to backend /contractors/apply
   console.log('Contractor application:', formData);
 
-  // Show success
   setTimeout(function() {
     document.querySelector('.form').style.display = 'none';
     document.getElementById('success-state').style.display = 'block';
@@ -583,3 +482,4 @@ function handleSubmit(e) {
 
 </body>
 </html>
+
